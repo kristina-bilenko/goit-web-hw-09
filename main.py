@@ -51,6 +51,9 @@ for author_url in authors_url_list:
         born_location = soup.find('span', class_='author-born-location')
         description = soup.find('div', class_='author-description')
 
+        data = {"fullname": fullname.text, "born_date": born_date.text, "born_location": born_location.text,
+                "description": description.text.strip()}
+
         authors_data.append(data)
 
 
